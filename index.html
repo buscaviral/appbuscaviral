@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Senha</title>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0077B6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005691;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Qual a sua senha?</h1>
+        <input type="password" id="senha" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Entrar</button>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            var senhaCorreta = ["KLYelqmFgc2XK55FJ9xrWsSRg3HgK6eC", "twGcXsAGug86MjmrgA7Dmd0bxjt4T9FE", "5STE70zCkjJ8eRLkFaLQpHBfKBOhyHiI", "AeyXzNQCsRBF0P55ZyQLRoFJOmBcCTpL", "e63jkMHiJJWGIwUiocFtxkDeY9ZfddDD", "ywjhCFO9ylZTnQPZaNs68gmpcA6HhzQ5", "He10Udn2UUsecAxcJ1o3dX5uDYNDM7md", "wPicQbjmiYIDJgIWsHRm40UzIOeoja4U"];
+            var senhaDigitada = document.getElementById('senha').value;
+            if (senhaCorreta.includes(senhaDigitada)) {
+                window.location.href = "pagina_principal.html";
+            } else {
+                alert("Senha incorreta.");
+            }
+        }
+    </script>
+</body>
+</html>
